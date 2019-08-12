@@ -1,0 +1,21 @@
+.thumb {
+    font-size: 1.5rem;
+    width: calc(25% - 3rem);
+    margin-bottom: 2rem;
+    
+    &:not(:nth-child(4n)) {
+        margin-right: 3rem;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        & > * {
+            padding: 5px 0;
+        }
+    }
+}

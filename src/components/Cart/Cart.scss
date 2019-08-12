@@ -1,0 +1,93 @@
+.Cart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(70% - 4.5rem);
+    margin-top: 4.5rem;
+    overflow-y: auto;
+
+    &__item:not(:first-child) {
+        border-top: 1px solid #ddd;
+    }
+
+    &__items {
+        padding-right: 1rem;
+    }
+
+    &__item {
+        padding-top: 1.2rem;
+        padding-right: 1.2rem;
+        display: flex;
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+
+        &--info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--img {
+            width: 6rem;
+            margin-right: 2rem;
+            border-radius: 3px;
+        }
+    
+        &--type {
+            font-size: 1.2rem;
+            color: #ddd;
+            padding: 5px 0px;
+        }
+
+        &--title {
+            font-size: 2rem;
+        }
+
+        &--price {
+            font-size: 2.2rem;
+            color: #e67e22;
+            font-weight: 600;
+        }
+
+        &--quantity {
+            span {
+                display: inline-block;
+                padding: 0px 1rem;
+            }
+
+            button {
+                width: 3rem;
+                height: 2.5rem;
+                border: none;
+                outline: none;
+                border-radius: 2px;
+                font-size: 1.8rem;
+                background-color: #e67e22;
+                color: #ddd;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* width */
+.Cart::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+.Cart::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+.Cart::-webkit-scrollbar-thumb {
+    background: #e67e22; 
+  }
+  
+  /* Handle on hover */
+.Cart::-webkit-scrollbar-thumb:hover {
+    background: #bf6516; 
+  }

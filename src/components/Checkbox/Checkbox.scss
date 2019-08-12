@@ -1,0 +1,27 @@
+.checkbox {
+    width: 3.5rem;
+    height: 3.5rem;
+    &__btn {
+      cursor: pointer;
+      &--checkmark {
+        display: flex;
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #bdc3c7;
+        border-radius: 50%;
+        outline: none;
+        font-size: 1.2rem;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+    input {
+      opacity: 0;
+      &:checked ~ .checkmark {
+        background: #d35400;
+        color: white;
+      }
+    }
+  }
+  

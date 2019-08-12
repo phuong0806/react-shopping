@@ -1,0 +1,18 @@
+$btn-color-primary: #e67e22;
+
+.btn {
+    width: 100%;
+    cursor: pointer;
+    &__primary {
+        color: white;
+        background-color: $btn-color-primary;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+    }
+
+    &:hover {
+        background-color: darken($btn-color-primary, 10%);
+    }
+}

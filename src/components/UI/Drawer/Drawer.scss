@@ -1,0 +1,51 @@
+.Drawer {
+  &__button {
+    position: fixed;
+    top: 1.5rem;
+    right: 2.5rem;
+    z-index: 99;
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      
+      & > * {
+        height: 1px;
+        width: 2rem;
+        background: #000;
+      }
+  
+      & > *:first-child {
+        margin-bottom: .5rem;
+      }
+  
+      & > *:last-child {
+        margin-top: .5rem;
+      }
+    }
+
+    input:checked ~ &--item {
+      & > * {
+        background: #fff;
+      }
+    }
+  }
+
+  &__products {
+    position: fixed;
+    top:0;
+    right:0;
+    width: 50rem;
+    height: 100vh;
+    background: rgba(0, 0, 0, .9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 0px 2rem;  
+    .Product {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

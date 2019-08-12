@@ -1,0 +1,12 @@
+.Filters {
+    width: 20%;
+    margin-top: 2.5rem;
+    .Filter {
+        display: flex;
+        flex-wrap: wrap;
+        & > * {
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+    }
+}
