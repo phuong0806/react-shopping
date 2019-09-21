@@ -54,7 +54,7 @@ function* handleProductsByFilter() {
 
         for (const key in filters) {
             const filter = filters[key];
-            if(filter.hasOwnProperty('isChecked') && filter.isChecked === true) {
+            if(filter.hasOwnProperty('isChecked') && filter.isChecked) {
                 arrFilter.push(filter.type);
             }
         }
