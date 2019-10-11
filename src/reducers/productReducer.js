@@ -15,7 +15,6 @@ const products = (state = initialState, { type, payload }) => {
                 isFetching: true,
             }
         case PRODUCTS.LOAD_SUCCESS: 
-            console.log('payload', payload);
             return {
                 ...state,
                 ...payload.data.reduce((obj, product) => {
@@ -41,6 +40,6 @@ const products = (state = initialState, { type, payload }) => {
 
 export const getProduct = (state, id) => state[id];
 
-export const getVisibleProducts = (state) => state.visibleIds.map(id => getProduct(state, id));
+export const getVisibleProducts = state => state.visibleIds.map(id => getProduct(state, id));
 
 export default products;
