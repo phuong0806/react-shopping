@@ -13,13 +13,16 @@ export default function* watchFilterSaga() {
 
 function* handleSearchFilter({ payload: { text } }) {
     try {
-        console.log("TCL: function*handleSearchFilter -> text", text)
         yield put(loadProducts());
+        
         let products = yield call(fetchProducts);
-        if(text.length) {
+      
+        if (text.length) {
             products = products.filter(p => p.title.toLowerCase().startsWith(text.toLowerCase()));
         }
+
         yield put(setProducts(products));     
+   
     } catch (error) {
         yield put(setError(error));
     }
