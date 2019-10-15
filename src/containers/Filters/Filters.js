@@ -44,9 +44,9 @@ class Filters extends PureComponent {
     }
 }
 
-const mapState = (state) => {  return {
+const mapState = (state) => ({
     filter: state.filter
-}}
+});
 
 const mapDispatch = {
     toggleFilter,
